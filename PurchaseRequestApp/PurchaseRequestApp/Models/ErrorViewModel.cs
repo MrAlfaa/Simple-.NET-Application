@@ -1,4 +1,4 @@
-namespace DotNet.Models;
+namespace PurchaseRequestApp.Models;
 
 public class ErrorViewModel
 {

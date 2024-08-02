@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DotNet.Models;
+using PurchaseRequestApp.Models;
 
-namespace DotNet.Controllers;
+namespace PurchaseRequestApp.Controllers;
 
 public class HomeController : Controller
 {

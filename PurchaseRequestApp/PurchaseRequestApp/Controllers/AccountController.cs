@@ -1,18 +1,34 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-public class AccountController : Controller
+namespace PurchaseRequestApp.Controllers
 {
-    // Add methods for Login, Register, etc.
-    public IActionResult Login()
+    public class AccountController : Controller
     {
-        return View();
-    }
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-    [HttpPost]
-    public async Task<IActionResult> Login(string username, string password)
-    {
-        // Implement login logic here
-        return RedirectToAction("Index", "Home");
+        public AccountController(SignInManager<IdentityUser> signInManager)
+        {
+            _signInManager = signInManager;
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(string username, string password)
+        {
+            var result = await _signInManager.PasswordSignInAsync(username, password, false, false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Create", "PurchaseRequest");
+            }
+
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            return View();
+        }
     }
 }

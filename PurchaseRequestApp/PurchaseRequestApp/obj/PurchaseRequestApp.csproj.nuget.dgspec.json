@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bavan\\Desktop\\PurchaseRequestApp\\DotNet.csproj": {}
+    "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bavan\\Desktop\\PurchaseRequestApp\\DotNet.csproj": {
+    "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bavan\\Desktop\\PurchaseRequestApp\\DotNet.csproj",
+        "projectUniqueName": "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj",
         "projectName": "PurchaseRequestApp",
-        "projectPath": "C:\\Users\\bavan\\Desktop\\PurchaseRequestApp\\DotNet.csproj",
-        "packagesPath": "C:\\Users\\bavan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bavan\\Desktop\\PurchaseRequestApp\\obj\\",
+        "projectPath": "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj",
+        "packagesPath": "C:\\Users\\dhana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bavan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\dhana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

@@ -1,34 +1,44 @@
-public class PurchaseRequestService : IPurchaseRequestService
+
+
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using PurchaseRequestApp.Models;
+using PurchaseRequestApp.Repositories;
+
+namespace PurchaseRequestApp.Services
 {
-    private readonly IPurchaseRequestRepository _repository;
-
-    public PurchaseRequestService(IPurchaseRequestRepository repository)
+    public class PurchaseRequestService : IPurchaseRequestService
     {
-        _repository = repository;
-    }
+        private readonly IPurchaseRequestRepository _repository;
 
-    public Task<IEnumerable<PurchaseRequest>> GetPendingRequestsAsync()
-    {
-        return _repository.GetPendingRequestsAsync();
-    }
+        public PurchaseRequestService(IPurchaseRequestRepository repository)
+        {
+            _repository = repository;
+        }
 
-    public Task<PurchaseRequest> GetRequestByIdAsync(int id)
-    {
-        return _repository.GetRequestByIdAsync(id);
-    }
+        public Task<IEnumerable<PurchaseRequest>> GetPendingRequestsAsync()
+        {
+            return _repository.GetPendingRequestsAsync();
+        }
 
-    public Task AddRequestAsync(PurchaseRequest request)
-    {
-        return _repository.AddRequestAsync(request);
-    }
+        public Task<PurchaseRequest> GetRequestByIdAsync(int id)
+        {
+            return _repository.GetRequestByIdAsync(id);
+        }
 
-    public Task ApproveRequestAsync(int id)
-    {
-        return _repository.ApproveRequestAsync(id);
-    }
+        public Task AddRequestAsync(PurchaseRequest request)
+        {
+            return _repository.AddRequestAsync(request);
+        }
 
-    public Task DisapproveRequestAsync(int id)
-    {
-        return _repository.DisapproveRequestAsync(id);
+        public Task ApproveRequestAsync(int id)
+        {
+            return _repository.ApproveRequestAsync(id);
+        }
+
+        public Task DisapproveRequestAsync(int id)
+        {
+            return _repository.DisapproveRequestAsync(id);
+        }
     }
 }

@@ -1,8 +1,17 @@
-public interface IPurchaseRequestService
+
+
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using PurchaseRequestApp.Models;
+
+namespace PurchaseRequestApp.Services
 {
-    Task<IEnumerable<PurchaseRequest>> GetPendingRequestsAsync();
-    Task<PurchaseRequest> GetRequestByIdAsync(int id);
-    Task AddRequestAsync(PurchaseRequest request);
-    Task ApproveRequestAsync(int id);
-    Task DisapproveRequestAsync(int id);
+    public interface IPurchaseRequestService
+    {
+        Task<IEnumerable<PurchaseRequest>> GetPendingRequestsAsync();
+        Task<PurchaseRequest> GetRequestByIdAsync(int id);
+        Task AddRequestAsync(PurchaseRequest request);
+        Task ApproveRequestAsync(int id);
+        Task DisapproveRequestAsync(int id);
+    }
 }

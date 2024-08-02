@@ -1,13 +1,19 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PurchaseRequestApp.Models;
+using Microsoft.AspNetCore.Identity;
 
-public class ApplicationDbContext : IdentityDbContext
+
+namespace PurchaseRequestApp.Data
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options)
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
-    }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
 
-    public DbSet<User> Users { get; set; }
-    public DbSet<PurchaseRequest> PurchaseRequests { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<PurchaseRequest> PurchaseRequests { get; set; }
+    }
 }
