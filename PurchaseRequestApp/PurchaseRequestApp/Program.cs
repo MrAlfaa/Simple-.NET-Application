@@ -6,7 +6,7 @@ using PurchaseRequestApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+// Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 21))));
@@ -21,7 +21,7 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-
+// Ensure the database is created and apply any pending migrations
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -29,7 +29,7 @@ using (var scope = app.Services.CreateScope())
     context.Database.Migrate();
 }
 
-
+// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

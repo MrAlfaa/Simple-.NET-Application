@@ -14,13 +14,11 @@ namespace PurchaseRequestApp.Controllers
             _service = service;
         }
 
-        
         public IActionResult Create()
         {
             return View();
         }
 
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(PurchaseRequest model)
@@ -34,21 +32,18 @@ namespace PurchaseRequestApp.Controllers
             return View(model);
         }
 
-       
         public async Task<IActionResult> Approve(int id)
         {
             await _service.ApproveRequestAsync(id);
             return RedirectToAction("Approval");
         }
 
-       
         public async Task<IActionResult> Disapprove(int id)
         {
             await _service.DisapproveRequestAsync(id);
             return RedirectToAction("Approval");
         }
 
-        
         public async Task<IActionResult> Approval()
         {
             var requests = await _service.GetPendingRequestsAsync();

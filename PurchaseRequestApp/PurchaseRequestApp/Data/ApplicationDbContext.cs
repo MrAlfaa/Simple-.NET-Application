@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using PurchaseRequestApp.Models;
 using Microsoft.AspNetCore.Identity;
 
-
 namespace PurchaseRequestApp.Data
 {
     public class ApplicationDbContext : IdentityDbContext<IdentityUser>
@@ -13,7 +12,6 @@ namespace PurchaseRequestApp.Data
         {
         }
 
-        public DbSet<User> Users { get; set; }
         public DbSet<PurchaseRequest> PurchaseRequests { get; set; }
     }
 }
