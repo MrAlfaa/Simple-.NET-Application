@@ -1,0 +1,36 @@
+@model IEnumerable<PurchaseRequest>
+
+@{
+    ViewData["Title"] = "Approve Purchase Requests";
+}
+
+<h2>Approve Purchase Requests</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Request Number</th>
+            <th>Item Code</th>
+            <th>Item Quantity</th>
+            <th>Item Cost</th>
+            <th>Total Cost</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.PurchaseRequestNumber</td>
+                <td>@request.ItemCode</td>
+                <td>@request.ItemQuantity</td>
+                <td>@request.ItemCost</td>
+                <td>@request.TotalCost</td>
+                <td>
+                    <a asp-controller="PurchaseRequest" asp-action="Approve" asp-route-id="@request.Id" class="btn btn-success">Approve</a>
+                    <a asp-controller="PurchaseRequest" asp-action="Disapprove" asp-route-id="@request.Id" class="btn btn-danger">Disapprove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
