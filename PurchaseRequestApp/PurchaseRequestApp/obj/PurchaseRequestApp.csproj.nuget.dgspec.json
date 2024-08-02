@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj": {}
+    "D:\\PROJECTS\\DEVELOPMENT\\WEB DEVELOPMENT\\FULL-STACK DEV\\DPInfoTech Project\\Simple-.NET-Application\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj": {
+    "D:\\PROJECTS\\DEVELOPMENT\\WEB DEVELOPMENT\\FULL-STACK DEV\\DPInfoTech Project\\Simple-.NET-Application\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj",
+        "projectUniqueName": "D:\\PROJECTS\\DEVELOPMENT\\WEB DEVELOPMENT\\FULL-STACK DEV\\DPInfoTech Project\\Simple-.NET-Application\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj",
         "projectName": "PurchaseRequestApp",
-        "projectPath": "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj",
+        "projectPath": "D:\\PROJECTS\\DEVELOPMENT\\WEB DEVELOPMENT\\FULL-STACK DEV\\DPInfoTech Project\\Simple-.NET-Application\\PurchaseRequestApp\\PurchaseRequestApp\\PurchaseRequestApp.csproj",
         "packagesPath": "C:\\Users\\dhana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhana\\Desktop\\PurchaseRequestApp\\PurchaseRequestApp\\obj\\",
+        "outputPath": "D:\\PROJECTS\\DEVELOPMENT\\WEB DEVELOPMENT\\FULL-STACK DEV\\DPInfoTech Project\\Simple-.NET-Application\\PurchaseRequestApp\\PurchaseRequestApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dhana\\AppData\\Roaming\\NuGet\\NuGet.Config"
